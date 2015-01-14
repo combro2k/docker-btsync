@@ -12,4 +12,7 @@ WORKDIR /opt/btsync
 
 RUN curl -k -L http://download.getsyncapp.com/endpoint/btsync/os/linux-x64/track/stable | tar zxv
 
+EXPOSE 8888
+EXPOSE 55555
+
 CMD ["/bin/bash"]
