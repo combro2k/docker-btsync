@@ -15,4 +15,6 @@ RUN curl -k -L http://download.getsyncapp.com/endpoint/btsync/os/linux-x64/track
 EXPOSE 8888
 EXPOSE 55555
 
+VOLUME ["/data"]
+
 CMD ["/bin/bash"]
