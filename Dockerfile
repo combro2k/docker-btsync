@@ -17,4 +17,4 @@ EXPOSE 55555
 
 VOLUME ["/data"]
 
-CMD ["/bin/bash"]
+CMD ["/opt/btsync/btsync", "--config", "/data/btsync.conf", "--nodaemon"]
