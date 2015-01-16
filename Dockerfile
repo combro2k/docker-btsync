@@ -3,6 +3,8 @@ MAINTAINER Martijn van Maurik <docker@vmaurik.nl>
 
 ENV DEBIAN_FRONTEND noninteractive
 
+RUN useradd btsync -b /data --no-create-home
+
 RUN apt-get update
 RUN apt-get dist-upgrade -yq
 RUN apt-get install tar curl -yq
@@ -18,5 +20,7 @@ EXPOSE 8888
 EXPOSE 55555
 
 VOLUME ["/data"]
+
+USER btsync
 
 CMD ["/opt/btsync/start.sh"]

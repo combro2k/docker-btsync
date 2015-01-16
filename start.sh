@@ -18,4 +18,6 @@ then
    /opt/btsync/btsync --dump-sample-config > /opt/btsync/btsync.conf
 fi
 
+chown btsync:btsync /data -R
+
 /opt/btsync/btsync --config /opt/btsync/btsync.conf --nodaemon
