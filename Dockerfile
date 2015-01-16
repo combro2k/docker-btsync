@@ -15,12 +15,11 @@ WORKDIR /opt/btsync
 RUN curl -k -L http://download.getsyncapp.com/endpoint/btsync/os/linux-x64/track/stable | tar zxv
 ADD start.sh /opt/btsync/start.sh
 RUN chmod +x /opt/btsync/start.sh
+RUN chown -R btsync:btsync /opt/btsync
 
 EXPOSE 8888
 EXPOSE 55555
 
 VOLUME ["/data"]
-
-USER btsync
 
 CMD ["/opt/btsync/start.sh"]
