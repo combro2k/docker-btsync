@@ -20,4 +20,4 @@ fi
 
 chown btsync:btsync /data -R
 
-sudo -u btsync /opt/btsync/btsync --config /opt/btsync/btsync.conf --nodaemon
+sudo -H -u btsync /opt/btsync/btsync --config /opt/btsync/btsync.conf --nodaemon
